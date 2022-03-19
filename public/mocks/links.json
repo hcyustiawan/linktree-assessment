@@ -52,5 +52,27 @@
         "type": "classic",
         "title": "Linktree Web",
         "url": "https://linktr.ee"
+    },
+    {
+        "id": "4",
+        "type": "music",
+        "title": "Light Switch (Acoustic)",
+        "data": [
+            {
+                "id": "music-1",
+                "type": "spotify",
+                "url": "https://open.spotify.com/track/42nDnUAPjhZFlj5wt2BjJm?si=3852f5ff2c614df5"
+            },
+            {
+                "id": "music-2",
+                "type": "youtube",
+                "url": "https://music.youtube.com/watch?v=WFsAon_TWPQ&list=RDAMVMWFsAon_TWPQ"
+            },
+            {
+                "id": "music-3",
+                "type": "apple",
+                "url": "https://music.apple.com/us/album/light-switch-acoustic-single/1609977173"
+            }
+        ]
     }
 ]

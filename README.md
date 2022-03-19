@@ -1,6 +1,6 @@
 # Linktree Frontend Assessment
 
-![Preview](assets/preview.png)
+![Preview](public/preview.png)
 
 ## The Problem
 
@@ -23,7 +23,7 @@ We have three new link types for our users profile pages, (such as https://linkt
 
 You are required to build the profile UI and the front end components for the new features as per the assets mentioned below (Front End Assets).
 
-## Design Considerations
+## Design Considerations  
 
 - All links are globally themed by the users preferences (usually available via API e.g `{ backgroundColor: "rebeccapurple", color: "palegoldenrod" }`).
 - All links invert colour on hover.

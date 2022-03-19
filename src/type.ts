@@ -1,6 +1,6 @@
 import profile from "../public/mocks/profile.json";
 
-// @assumption that type is generated using some tools
+// @assumption: type is generated using some tools
 export type ProfileType = typeof profile;
 
 export type ClassicLinkType = {
@@ -17,6 +17,7 @@ export type ShowDetailType = {
   location: string;
   soldOut: boolean;
 };
+
 export type ShowLinkType = {
   id: string;
   type: "show";
@@ -24,4 +25,28 @@ export type ShowLinkType = {
   data: ShowDetailType[];
 };
 
-export type LinkCollectionType = (ClassicLinkType | ShowLinkType)[];
+export type MusicDetailType = {
+  id: string;
+  type:
+    | "spotify"
+    | "apple"
+    | "soundcloud"
+    | "youtube"
+    | "deezer"
+    | "tidal"
+    | "bandcamp";
+  url: string;
+};
+
+export type MusicLinkType = {
+  id: string;
+  type: "music";
+  title: string;
+  data: MusicDetailType[];
+};
+
+export type LinkCollectionType = (
+  | ClassicLinkType
+  | ShowLinkType
+  | MusicLinkType
+)[];
