@@ -31,6 +31,12 @@ const ShowLink = ({
     setExpanded((expanded) => !expanded);
   }, []);
 
+  const filteredChildren = Children.map(children, (child) => {
+    if ((child as ReactElement).type === ShowDetail) {
+      return child;
+    }
+  });
+
   return (
     <Box width="100%">
       <Button
@@ -49,7 +55,7 @@ const ShowLink = ({
       <Collapse in={expanded} unmountOnExit>
         <Box backgroundColor="#F5F7F8">
           <Box maxHeight="340px" overflowY="scroll">
-            {children}
+            {filteredChildren}
           </Box>
           <Flex justifyContent="center" alignItems="center" py={6}>
             <SongKickWordMarkSVG />
