@@ -16,6 +16,7 @@ const defaultTheme = extendTheme({
 });
 
 export const App = () => {
+  // @todo: suspense fallback can be anything, putting null for the time being
   return (
     <Suspense fallback={null}>
       <ProfileThemeProvider defaultTheme={defaultTheme}>
