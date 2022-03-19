@@ -9,7 +9,7 @@ export const ClassicLink = ({
   title,
   ...props
 }: ClassicLinkProps) => {
-  const sx = useStyleConfig("CustomLink");
+  const sx = useStyleConfig("LinkStyle");
   return (
     <Link
       {...props}

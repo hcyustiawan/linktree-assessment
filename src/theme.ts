@@ -10,7 +10,7 @@ export const globalStyles: Styles = {
 };
 
 export const componentTheme: Record<string, StyleConfig> = {
-  CustomLink: {
+  LinkStyle: {
     baseStyle: {
       fontSize: "14px",
       fontWeight: "normal",

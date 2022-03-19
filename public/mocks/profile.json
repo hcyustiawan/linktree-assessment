@@ -4,9 +4,17 @@
     "pageTitle": "@yourname",
     "profilePictureUrl": "/mocks/profile-picture.png",
     "theme": {
-        "linkStyle": {
-            "backgroundColor": "rebeccapurple",
-            "color": "palegoldenrod"
+        "components": {
+            "LinkStyle": {
+                "baseStyle": {
+                    "backgroundColor": "rebeccapurple",
+                    "color": "palegoldenrod",
+                    "_hover": {
+                        "backgroundColor": "palegoldenrod",
+                        "color": "rebeccapurple"
+                    }
+                }
+            }
         }
     }
 }

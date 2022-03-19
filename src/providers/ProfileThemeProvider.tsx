@@ -26,18 +26,8 @@ export const ProfileThemeProvider = ({
 
   useEffect(() => {
     if (profile) {
-      const components: Record<string, StyleConfig> = {
-        CustomLink: {
-          baseStyle: {
-            backgroundColor: profile.theme.linkStyle.backgroundColor,
-            color: profile.theme.linkStyle.color,
-            _hover: {
-              color: profile.theme.linkStyle.backgroundColor,
-              backgroundColor: profile.theme.linkStyle.color,
-            },
-          },
-        },
-      };
+      //@assumption: api service will return the same style config.
+      const components: Record<string, StyleConfig> = profile.theme.components;
       setCustomTheme(extendTheme(defaultTheme, { components }));
     }
   }, [defaultTheme, profile]);

@@ -25,7 +25,7 @@ const ShowLink = ({
   children,
   ...props
 }: PropsWithChildren<ShowLinkProps>) => {
-  const sx = useStyleConfig("CustomLink");
+  const sx = useStyleConfig("LinkStyle");
   const [expanded, setExpanded] = useState(false);
   const handleClick = useCallback(() => {
     setExpanded((expanded) => !expanded);
