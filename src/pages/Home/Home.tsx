@@ -18,9 +18,10 @@ export const Home = () => {
       <Flex
         minH="100vh"
         py={8}
+        px={5}
         alignItems="center"
         flexDirection="column"
-        maxWidth="680px"
+        maxWidth="700px"
         margin="auto"
       >
         <Profile size="xl" name={pageTitle} src={profilePictureUrl} />
