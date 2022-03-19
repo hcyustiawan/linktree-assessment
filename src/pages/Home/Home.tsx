@@ -1,6 +1,8 @@
-import { Box, Flex } from "@chakra-ui/react";
-import { ClassicLink, Profile } from "../components";
-import { useProfileData } from "../providers";
+import { Box, Flex, Spinner, VStack } from "@chakra-ui/react";
+import { Suspense } from "react";
+import { Profile } from "../../components";
+import { useProfileData } from "../../providers";
+import { LinkList } from "./LinkList";
 
 export const Home = () => {
   const profile = useProfileData();
@@ -21,7 +23,11 @@ export const Home = () => {
         margin="auto"
       >
         <Profile size="xl" name={pageTitle} src={profilePictureUrl} />
-        <ClassicLink title="tesat"></ClassicLink>
+        <VStack spacing={4} flex={1} mt={6} width="100%">
+          <Suspense fallback={<Spinner />}>
+            <LinkList />
+          </Suspense>
+        </VStack>
       </Flex>
     </Box>
   );

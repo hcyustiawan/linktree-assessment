@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "type": "classic",
+        "title": "Linktree Web",
+        "url": "https://linktr.ee"
+    },
+    {
+        "type": "music",
+        "title": "my music",
+        "urls": [
+            {
+                "url": "asdf"
+            }
+        ]
+    }
+]
