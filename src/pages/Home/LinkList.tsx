@@ -40,6 +40,7 @@ export const LinkList = () => {
           return (
             <AccordionLink id={link.id} key={link.id} title={link.title}>
               <Box>
+                {/* @todo: spotify streaming platform ui */}
                 {link.data.map((show) => (
                   <AccordionLink.MusicDetail key={show.id} {...show} />
                 ))}
