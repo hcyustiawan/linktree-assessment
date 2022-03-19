@@ -12,6 +12,8 @@ export const globalStyles: Styles = {
 export const componentTheme: Record<string, StyleConfig> = {
   CustomLink: {
     baseStyle: {
+      fontSize: "14px",
+      fontWeight: "normal",
       backgroundColor: "#39E09B",
       color: "#263238",
       _hover: {

@@ -6,11 +6,16 @@
         "url": "https://linktr.ee"
     },
     {
-        "type": "music",
-        "title": "my music",
-        "urls": [
+        "id": "2",
+        "type": "show",
+        "title": "My Shows",
+        "data": [
             {
-                "url": "asdf"
+                "id": "show-1",
+                "date": "March 25 2022",
+                "url": "https://www.songkick.com/concerts/40103943-broods-at-metro-theatre",
+                "location": "Metro Theatre, Sydney",
+                "soldOut": false
             }
         ]
     }

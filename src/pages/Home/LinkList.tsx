@@ -1,4 +1,5 @@
 import { ClassicLink } from "../../components";
+import { ShowLink } from "../../components/ShowLink";
 import { useMockLinks } from "../../hooks/useMockLinks";
 
 export const LinkList = () => {
@@ -15,6 +16,15 @@ export const LinkList = () => {
         if (type === "classic") {
           return (
             <ClassicLink key={link.id} title={link.title} href={link.url} />
+          );
+        }
+        if (type === "show") {
+          return (
+            <ShowLink key={link.id} title={link.title}>
+              {link.data.map((show) => (
+                <ShowLink.Detail {...show} />
+              ))}
+            </ShowLink>
           );
         }
         return null;
