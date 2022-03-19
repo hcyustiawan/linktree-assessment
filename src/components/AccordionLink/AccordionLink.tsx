@@ -5,25 +5,30 @@ import {
   Collapse,
   useStyleConfig,
 } from "@chakra-ui/react";
-import { PropsWithChildren, useCallback, useState } from "react";
+import { PropsWithChildren, useCallback } from "react";
+import { useActiveLinkProvider } from "../../providers";
 import { MusicDetail } from "./MusicDetail";
 import { ShowDetail } from "./ShowDetail";
 
 interface AccordionLinkProps extends ButtonProps {
   title: string;
+  id: string;
 }
 
 const AccordionLink = ({
+  id,
   title,
   children,
   ...props
 }: PropsWithChildren<AccordionLinkProps>) => {
   const sx = useStyleConfig("LinkStyle");
-  const [expanded, setExpanded] = useState(false);
-  const handleClick = useCallback(() => {
-    setExpanded((expanded) => !expanded);
-  }, []);
+  const { active, setActive } = useActiveLinkProvider();
 
+  const handleClick = useCallback(() => {
+    setActive((current) => (current === id ? null : id));
+  }, [id, setActive]);
+
+  console.log(active);
   return (
     <Box width="100%">
       <Button
@@ -39,7 +44,7 @@ const AccordionLink = ({
       >
         {title}
       </Button>
-      <Collapse in={expanded} unmountOnExit>
+      <Collapse in={active === id} unmountOnExit>
         <Box backgroundColor="#F5F7F8">{children}</Box>
       </Collapse>
     </Box>

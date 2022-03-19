@@ -25,7 +25,7 @@ export const Home = () => {
         margin="auto"
       >
         <Profile size="xl" name={pageTitle} src={profilePictureUrl} />
-        <VStack spacing={4} flex={1} mt={6} width="100%">
+        <VStack spacing={4} flex={1} my={6} width="100%">
           <Suspense fallback={<Spinner />}>
             <LinkList />
           </Suspense>

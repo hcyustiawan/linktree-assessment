@@ -49,12 +49,6 @@
     },
     {
         "id": "3",
-        "type": "classic",
-        "title": "Linktree Web",
-        "url": "https://linktr.ee"
-    },
-    {
-        "id": "4",
         "type": "music",
         "title": "Light Switch (Acoustic)",
         "data": [
@@ -74,5 +68,11 @@
                 "url": "https://music.apple.com/us/album/light-switch-acoustic-single/1609977173"
             }
         ]
+    },
+    {
+        "id": "4",
+        "type": "classic",
+        "title": "Linktree Web",
+        "url": "https://linktr.ee"
     }
 ]

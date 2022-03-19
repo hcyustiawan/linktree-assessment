@@ -3,6 +3,7 @@ import { ClassicLink } from "../../components";
 import { AccordionLink } from "../../components/AccordionLink";
 import { useMockLinks } from "../../hooks/useMockLinks";
 import { ReactComponent as SongKickWordMarkSVG } from "../../icons/by-songkick-wordmark.svg";
+import { ActiveLinkProvider } from "../../providers";
 
 export const LinkList = () => {
   const links = useMockLinks();
@@ -11,10 +12,9 @@ export const LinkList = () => {
     return null;
   }
 
-  // @todo: provider to track which link is currently expanded
   // @improvement: with thousands of links, might want to improve using virtualisation library (eg.: react-virtualise)
   return (
-    <>
+    <ActiveLinkProvider>
       {links.map((link) => {
         const { type } = link;
         if (type === "classic") {
@@ -24,7 +24,7 @@ export const LinkList = () => {
         }
         if (type === "show") {
           return (
-            <AccordionLink key={link.id} title={link.title}>
+            <AccordionLink id={link.id} key={link.id} title={link.title}>
               <Box maxHeight="340px" overflowY="scroll">
                 {link.data.map((show) => (
                   <AccordionLink.ShowDetail key={show.id} {...show} />
@@ -38,7 +38,7 @@ export const LinkList = () => {
         }
         if (type === "music") {
           return (
-            <AccordionLink key={link.id} title={link.title}>
+            <AccordionLink id={link.id} key={link.id} title={link.title}>
               <Box>
                 {link.data.map((show) => (
                   <AccordionLink.MusicDetail key={show.id} {...show} />
@@ -49,6 +49,6 @@ export const LinkList = () => {
         }
         return null;
       })}
-    </>
+    </ActiveLinkProvider>
   );
 };
