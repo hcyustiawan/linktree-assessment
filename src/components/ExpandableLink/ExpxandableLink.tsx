@@ -22,13 +22,14 @@ const ExpandableLink = ({
   ...props
 }: PropsWithChildren<ExpandableLinkProps>) => {
   const sx = useStyleConfig("LinkStyle");
+
+  //@todo: decouple this, make it possible to control component from props
   const { active, setActive } = useActiveLinkProvider();
 
   const handleClick = useCallback(() => {
     setActive((current) => (current === id ? null : id));
   }, [id, setActive]);
 
-  console.log(active);
   return (
     <Box width="100%">
       <Button

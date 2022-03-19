@@ -26,7 +26,16 @@ export const ProfileThemeProvider = ({
 
   useEffect(() => {
     if (profile) {
+      window.document.title = `${profile?.pageTitle} | Linktree`;
+    } else {
+      window.document.title = "Linktree";
+    }
+  }, [profile]);
+
+  useEffect(() => {
+    if (profile) {
       //@assumption: api service will return the same style config.
+      //@todo: can be improve to just pass in the whole theme from the profile
       const components: Record<string, StyleConfig> = profile.theme.components;
       setCustomTheme(extendTheme(defaultTheme, { components }));
     }
