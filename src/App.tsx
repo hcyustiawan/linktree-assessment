@@ -1,20 +1,16 @@
-import { extendTheme } from "@chakra-ui/react";
+import { extendTheme, Theme } from "@chakra-ui/react";
 import { Suspense } from "react";
 
 import { Home } from "./pages";
 import { ProfileThemeProvider } from "./providers";
+import { componentTheme, globalStyles } from "./theme";
 
-const defaultTheme = extendTheme({
-  styles: {
-    global: {
-      "html, body, #root": {
-        height: "100%",
-        width: "100%",
-      },
-    },
-  },
-});
+const defaultTheme = extendTheme(
+  { styles: globalStyles },
+  { components: componentTheme }
+);
 
+console.log(defaultTheme as Theme);
 export const App = () => {
   // @todo: suspense fallback can be anything, putting null for the time being
   return (
