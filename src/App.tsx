@@ -1,9 +1,10 @@
-import { ChakraProvider, extendTheme, Flex, Spinner } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import { Suspense } from "react";
 
 import { Home } from "./pages";
+import { ProfileThemeProvider } from "./providers";
 
-const theme = extendTheme({
+const defaultTheme = extendTheme({
   styles: {
     global: {
       "html, body, #root": {
@@ -14,21 +15,12 @@ const theme = extendTheme({
   },
 });
 
-export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Suspense
-      fallback={
-        <Flex
-          justifyContent="center"
-          alignItems="center"
-          width="100%"
-          height="100%"
-        >
-          <Spinner color="green.400" size="lg" />
-        </Flex>
-      }
-    >
-      <Home />
+export const App = () => {
+  return (
+    <Suspense fallback={null}>
+      <ProfileThemeProvider defaultTheme={defaultTheme}>
+        <Home />
+      </ProfileThemeProvider>
     </Suspense>
-  </ChakraProvider>
-);
+  );
+};

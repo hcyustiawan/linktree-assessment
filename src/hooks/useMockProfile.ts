@@ -1,10 +1,7 @@
-import profile from "../../public/mocks/profile.json";
-
-// @assumption that type is generated using some tools
-export type Profile = typeof profile;
+import { ProfileType } from "../type";
 
 // singleton profile data
-let profileData: Profile | undefined | null;
+let profileData: ProfileType | undefined | null;
 let promise: Promise<void> | null = null;
 export const useMockProfile = (): typeof profileData => {
   if (!promise) {
