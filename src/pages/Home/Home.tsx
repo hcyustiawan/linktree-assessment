@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Profile } from "../../components";
 import { useProfileData } from "../../providers";
 import { LinkList } from "./LinkList";
+import { ReactComponent as LinkTree } from "../../icons/logo.svg";
 
 export const Home = () => {
   const profile = useProfileData();
@@ -28,6 +29,7 @@ export const Home = () => {
             <LinkList />
           </Suspense>
         </VStack>
+        <LinkTree />
       </Flex>
     </Box>
   );

@@ -2,8 +2,8 @@
     {
         "id": "1",
         "type": "classic",
-        "title": "Linktree Web",
-        "url": "https://linktr.ee"
+        "title": "My Profile",
+        "url": "https://linkedin.com/"
     },
     {
         "id": "2",
@@ -46,5 +46,11 @@
                 "soldOut": true
             }
         ]
+    },
+    {
+        "id": "3",
+        "type": "classic",
+        "title": "Linktree Web",
+        "url": "https://linktr.ee"
     }
 ]
