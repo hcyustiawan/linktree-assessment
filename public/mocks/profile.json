@@ -1,0 +1,12 @@
+{
+    "id": "1",
+    "username": "yourname",
+    "pageTitle": "@yourname",
+    "profilePictureUrl": "/mocks/profile-picture.png",
+    "theme": {
+        "linkStyle": {
+            "backgroundColor": "rebeccapurple",
+            "color": "palegoldenrod"
+        }
+    }
+}
