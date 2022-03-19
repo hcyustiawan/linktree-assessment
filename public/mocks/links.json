@@ -14,8 +14,36 @@
                 "id": "show-1",
                 "date": "March 25 2022",
                 "url": "https://www.songkick.com/concerts/40103943-broods-at-metro-theatre",
-                "location": "Metro Theatre, Sydney",
+                "location": "Metro Theatre, Sydney, NSW, Australia",
                 "soldOut": false
+            },
+            {
+                "id": "show-2",
+                "date": "March 26 2022",
+                "url": "https://www.songkick.com/concerts/39966151-kings-of-leon-at-qudos-bank-arena",
+                "location": "Qudos Bank Arena, Sydney, NSW, Australia",
+                "soldOut": true
+            },
+            {
+                "id": "show-3",
+                "date": "March 27 2022",
+                "url": "https://www.songkick.com/concerts/40128686-amy-vee-at-harbour-spirit-sydney-harbour-cruise",
+                "location": "Harbour Spirit - Sydney Harbour Cruise, Darling Harbour, NSW, Australia",
+                "soldOut": false
+            },
+            {
+                "id": "show-4",
+                "date": "March 30 2022",
+                "url": "https://www.songkick.com/concerts/40224657-stevan-at-vanguard",
+                "location": "The Vanguard, Newtown, NSW, Australia",
+                "soldOut": true
+            },
+            {
+                "id": "show-5",
+                "date": "March 31 2022",
+                "url": "https://www.songkick.com/concerts/40270991-goldfish-smarts-at-buckettys-brewing-co",
+                "location": "Bucketty's Brewing Co., Sydney, NSW, Australia",
+                "soldOut": true
             }
         ]
     }

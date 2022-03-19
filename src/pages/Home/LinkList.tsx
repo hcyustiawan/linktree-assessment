@@ -22,7 +22,7 @@ export const LinkList = () => {
           return (
             <ShowLink key={link.id} title={link.title}>
               {link.data.map((show) => (
-                <ShowLink.Detail {...show} />
+                <ShowLink.Detail key={show.id} {...show} />
               ))}
             </ShowLink>
           );

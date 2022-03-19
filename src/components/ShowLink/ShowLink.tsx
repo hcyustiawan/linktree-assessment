@@ -3,10 +3,18 @@ import {
   Button,
   ButtonProps,
   Collapse,
+  Flex,
   useStyleConfig,
 } from "@chakra-ui/react";
-import { PropsWithChildren, useCallback, useState } from "react";
+import {
+  Children,
+  PropsWithChildren,
+  ReactElement,
+  useCallback,
+  useState,
+} from "react";
 import { ShowDetail } from "./ShowDetail";
+import { ReactComponent as SongKickWordMarkSVG } from "../../icons/by-songkick-wordmark.svg";
 
 interface ShowLinkProps extends ButtonProps {
   title: string;
@@ -39,7 +47,14 @@ const ShowLink = ({
         {title}
       </Button>
       <Collapse in={expanded} unmountOnExit>
-        <Box backgroundColor="#F5F7F8">{children}</Box>
+        <Box backgroundColor="#F5F7F8">
+          <Box maxHeight="340px" overflowY="scroll">
+            {children}
+          </Box>
+          <Flex justifyContent="center" alignItems="center" py={6}>
+            <SongKickWordMarkSVG />
+          </Flex>
+        </Box>
       </Collapse>
     </Box>
   );
