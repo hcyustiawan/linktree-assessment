@@ -1,6 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import { ClassicLink } from "../../components";
-import { AccordionLink } from "../../components/AccordionLink";
+import { ExpandableLink } from "../../components/ExpandableLink";
 import { useMockLinks } from "../../hooks/useMockLinks";
 import { ReactComponent as SongKickWordMarkSVG } from "../../icons/by-songkick-wordmark.svg";
 import { ActiveLinkProvider } from "../../providers";
@@ -24,28 +24,28 @@ export const LinkList = () => {
         }
         if (type === "show") {
           return (
-            <AccordionLink id={link.id} key={link.id} title={link.title}>
+            <ExpandableLink id={link.id} key={link.id} title={link.title}>
               <Box maxHeight="340px" overflowY="scroll">
                 {link.data.map((show) => (
-                  <AccordionLink.ShowDetail key={show.id} {...show} />
+                  <ExpandableLink.ShowDetail key={show.id} {...show} />
                 ))}
               </Box>
               <Flex justifyContent="center" alignItems="center" py={6}>
                 <SongKickWordMarkSVG />
               </Flex>
-            </AccordionLink>
+            </ExpandableLink>
           );
         }
         if (type === "music") {
           return (
-            <AccordionLink id={link.id} key={link.id} title={link.title}>
+            <ExpandableLink id={link.id} key={link.id} title={link.title}>
               <Box>
                 {/* @todo: spotify streaming platform ui */}
                 {link.data.map((show) => (
-                  <AccordionLink.MusicDetail key={show.id} {...show} />
+                  <ExpandableLink.MusicDetail key={show.id} {...show} />
                 ))}
               </Box>
-            </AccordionLink>
+            </ExpandableLink>
           );
         }
         return null;

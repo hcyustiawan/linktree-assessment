@@ -10,17 +10,17 @@ import { useActiveLinkProvider } from "../../providers";
 import { MusicDetail } from "./MusicDetail";
 import { ShowDetail } from "./ShowDetail";
 
-interface AccordionLinkProps extends ButtonProps {
+interface ExpandableLinkProps extends ButtonProps {
   title: string;
   id: string;
 }
 
-const AccordionLink = ({
+const ExpandableLink = ({
   id,
   title,
   children,
   ...props
-}: PropsWithChildren<AccordionLinkProps>) => {
+}: PropsWithChildren<ExpandableLinkProps>) => {
   const sx = useStyleConfig("LinkStyle");
   const { active, setActive } = useActiveLinkProvider();
 
@@ -45,13 +45,15 @@ const AccordionLink = ({
         {title}
       </Button>
       <Collapse in={active === id} unmountOnExit>
-        <Box backgroundColor="#F5F7F8">{children}</Box>
+        <Box backgroundColor="#F5F7F8" borderBottomRadius={4}>
+          {children}
+        </Box>
       </Collapse>
     </Box>
   );
 };
 
-AccordionLink.ShowDetail = ShowDetail;
-AccordionLink.MusicDetail = MusicDetail;
+ExpandableLink.ShowDetail = ShowDetail;
+ExpandableLink.MusicDetail = MusicDetail;
 
-export { AccordionLink };
+export { ExpandableLink };
